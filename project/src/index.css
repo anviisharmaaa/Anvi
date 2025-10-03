@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-pink: #EC4899;
+    --color-pink-light: #F472B6;
+    --color-pink-dark: #DB2777;
+    --color-beige: #F5F5DC;
+    --color-beige-light: #FAFAF0;
+    --color-grey-dark: #2D2D2D;
+    --color-grey: #3D3D3D;
+    --color-grey-light: #4D4D4D;
+    --color-black: #000000;
+    --color-charcoal: #333333;
+    --color-navy: #1B1B3A;
+  }
+
+  body {
+    background-color: var(--color-grey-dark);
+    color: var(--color-charcoal);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
+  }
+}
